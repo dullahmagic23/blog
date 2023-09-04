@@ -10,11 +10,11 @@ export const createJWT = (user) => {
 }
 
 export const comparePasswords = (password,hash)=>{
-    return bcrypt.compare(password,hash)
+    return  bcrypt.compare(password,hash)
 }
 
-export const hashPassword = (password)=>{
-    return bcrypt.hash(password,123);
+export const hashPassword = (password) =>{
+    return bcrypt.hash(password, 5);
 }
 export const protect = async (req,res, next)=>{
     const bearer = req.headers.authorization;
@@ -44,4 +44,5 @@ export const protect = async (req,res, next)=>{
         })
         return;
     }
+
 }
