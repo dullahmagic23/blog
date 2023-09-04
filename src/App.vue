@@ -1,10 +1,24 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <div class="container mt-5">
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <router-link to="login" class="nav-link">
+            <button class="btn btn-dark">
+              Login
+            </button>
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="register" class="nav-link">
+            <button class="btn btn-dark">
+              Register
+            </button>
+          </router-link>
+        </li>
+      </ul>
+      <router-view/>
+    </div>
   </div>
 </template>
 
